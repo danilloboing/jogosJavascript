@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inter;
+  width: 100%;
+
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+nav {
+  border-bottom: 2px solid;
+  background-color: yellow;
+  font-weight: 700;
+}
+
+
+.nav-link{
+  text-decoration: none;
+  border: none;
+  color: black;
+}
+
+#logo-header {
+  width: 6rem;
+}
+
+#main-logo {
+  margin: 74px auto auto;
+
+}
+
+.botao-jogar {
+  background-color: yellow;
+  color: black;
+  border-color: black;
+  width: 10em;
+}
+
+.botao-github {
+  width: 10em;
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  background-color: beige;
+  color: black;
+  border: 1px solid black;
+}
+
+#games {
+  scroll-behavior: smooth;
+}
+
+.contato{
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width:500px) {
+  .texto-principal {
+    font-size: 15px;
+  }
+}

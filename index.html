@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minijogos Javascript</title>
+
+  <link rel="icon" href="/src/img/controle-de-video-game.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/src/css/style.css">
+
+  </head>
+  <body>
+    
+    <header>
+      <nav class=" navbar navbar-expand-sm mb-4 fixed-top w-100 p-3">
+        <div class="container-fluid d-flex justify-content-around align-items-center">
+        <img 
+        src="/src/img/js.png" 
+        id="logo-header"
+        alt="logo do Minijogos Javascript">
+        
+        <button class="navbar-toggler botao-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navegacao me-auto mb-2 mb-sm-0">
+            <li class="nav-item" aria-current="page">
+              <a class="nav-link" href="/index.html">Home</a> 
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--Main content-->
+  <main>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5 col-lg-10 m-auto">
+          <img src="./src/img/header-logo-JS.png" class="img-fluid rounded-top pt-5 w-100 m-auto " alt="Logos do Minijogos Javascript">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            
+            <p class="texto-principal lead text-muted">Melhor que apenas desenvolver alguns jogos com Javascript, é deixar que outras pessoas joguem também. E este é o propósito desta página.</p>
+            <div class="d-flex  justify-content-center flex-wrap">
+              <a href="#games" class="botao-jogar btn btn-primary my-2">Jogar</a>
+              <a href="https://github.com/danilloboing/jogosJavascript" target="_blank" class="botao-github btn btn-secondary my-2">Repositório <img src="/src/img/github.svg" alt="Logo do github"></a>
+            </div>
+          </div>  
+        </div>
+      </section>
+    </div>
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+  
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </main>
+  <footer class="col-12 m-auto">
+    <div class="container-fluid d-flex flex-column align-items-center">
+      <div class="contato">
+        <p class="lead">Contato</p>
+        <ul class="d-flex flex-row p-0 flex-wrap justify-content-center">
+          <a class="footer-list" href="https://www.linkedin.com/in/danilloboing/" target="_blank"><img class="logos-footer" width="40" src="/src/img/linkedin.svg" alt="logo do linkedin com meu link"></a>
+          <a class="footer-list" href="https://github.com/danilloboing" target="_blank"><img class="logos-footer" width="40" src="/src/img/github.svg" alt="logo do github com meu link"></a>
+          <a class="footer-list" href="https://api.whatsapp.com/send?%201=pt_BR&phone=554791131104" target="_blank"><img class="logos-footer" width="40" src="/src/img/whatsapp.svg" alt="logo do whatsapp"></a>
+          <a class="footer-list" href="https://www.instagram.com/danilloboing/" target="_blank"><img class="logos-footer" width="40" src="/src/img/instagram.svg" alt="logo do instagram"></a>
+          <a class="footer-list" href="https://www.99freelas.com.br/user/danilloboing" target="_blank"><img class="logos-footer" width="40" src="/src/img/9-square-fill.svg" alt="logo do 99freelas com meu link"></a>
+        </ul>
+        <p class="copyright"><span class="text-muted">&copy; 2023 Danillo Boing</span></p>
+    </div>
+    <button class="botaoVoltar btn btn-secondary" id="contato">
+      <a href="" class="botaoVoltar-Link">Voltar ao topo</a>
+    </button>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
