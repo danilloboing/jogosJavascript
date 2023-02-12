@@ -4,7 +4,7 @@ body {
   border: 0;
   font-family: inter;
   width: 100%;
-
+  background-color: #fefefe;
 }
 
 .navbar-collapse {
@@ -16,6 +16,10 @@ nav {
   font-weight: 700;
 }
 
+#home{
+  scroll-behavior: smooth;
+}
+
 
 .nav-link{
   text-decoration: none;
@@ -25,6 +29,7 @@ nav {
 
 #logo-header {
   width: 6rem;
+  scroll-behavior: smooth;
 }
 
 #main-logo {
@@ -32,14 +37,18 @@ nav {
 
 }
 
-.botao-jogar {
+#botao-jogar {
   background-color: yellow;
   color: black;
   border-color: black;
   width: 10em;
 }
 
-.botao-github {
+#botao-jogar:hover {
+  background-color: rgb(236, 217, 4);
+}
+
+#botao-github {
   width: 10em;
   margin-left: 10px;
   display: flex;
@@ -50,12 +59,21 @@ nav {
   border: 1px solid black;
 }
 
+#botao-github:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+
 #games {
   scroll-behavior: smooth;
 }
 
 .contato{
   scroll-behavior: smooth;
+}
+
+.logos-footer{
+  padding-left: 10px;
 }
 
 @media screen and (max-width:500px) {
