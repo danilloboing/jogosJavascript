@@ -30,19 +30,19 @@ const startGame = () => {
   }
 
   setBoardHoverClass();
-  winningMessage.classList.remove("show-winning-message");
+  winningMessage.classList.remove("mostrar-resultado-jogo");
 };
 
 const endGame = (isDraw) => {
   if (isDraw) {
-    winningMessageTextElement.innerText = "Empate!";
+    winningMessageTextElement.innerText = "Deu velha!";
   } else {
     winningMessageTextElement.innerText = isCircleTurn
       ? "O Venceu!"
       : "X Venceu!";
   }
 
-  winningMessage.classList.add("show-winning-message");
+  winningMessage.classList.add("mostrar-resultado-jogo");
 };
 
 const checkForWin = (currentPlayer) => {
