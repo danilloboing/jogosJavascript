@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MiniJogos JS - Jogo da Forca</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="">
+
+    <link rel="icon" href="/src/img/controle-de-video-game.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <link rel="stylesheet" href="./src/css/style.css">
+      <link rel="stylesheet" href="./src/css/jogoDaForca.css">
+  </head>
+
+  <body>
+
+    <header>
+      <nav class=" navbar navbar-expand-sm mb-4 fixed-top w-100 p-3">
+        <div class="container-fluid d-flex justify-content-around align-items-center">
+          <img src="./src/img/js.png" id="logo-header" alt="logo do Minijogos Javascript">
+          <button class="navbar-toggler botao-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="nav navbar-nav navegacao me-auto mb-2 mb-sm-0">
+              <li class="nav-item" aria-current="page">
+                <a class="nav-link" href="/index.html">Home</a> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#contato">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="jogo-da-forca">
+      <h1>Jogo da Forca</h1>
+      <p class="word-display"></p>
+      <p>Letras Erradas: <span class="wrong-guesses"></span></p>
+      <form class="guess-form">
+        <label for="guess-input">Digite uma letra:</label>
+        <input type="text" class="guess-input" maxlength="1">
+        <button class="botao-jogar" type="submit">Adivinhar</button>
+        <button class="botao-reset" type="click">Reiniciar</button>
+      </form>
+    </div>
+
+    <footer class="col-12 m-auto">
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <div id="contato" class="contato">
+          <p class="lead text-center">Contato</p>
+          <ul class="d-flex flex-row p-0 flex-wrap justify-content-center">
+            <a class="footer-list" href="https://www.linkedin.com/in/danilloboing/" target="_blank"><img class="logos-footer" width="40" src="./src/img/linkedin.svg" alt="logo do linkedin com meu link"></a>
+            <a class="footer-list" href="https://github.com/danilloboing" target="_blank"><img class="logos-footer" width="40" src="./src/img/github.svg" alt="logo do github com meu link"></a>
+            <a class="footer-list" href="https://api.whatsapp.com/send?%201=pt_BR&phone=554791131104" target="_blank"><img class="logos-footer" width="40" src="./src/img/whatsapp.svg" alt="logo do whatsapp"></a>
+            <a class="footer-list" href="https://www.instagram.com/danilloboing/" target="_blank"><img class="logos-footer" width="40" src="./src/img/instagram.svg" alt="logo do instagram"></a>
+            <a class="footer-list" href="https://www.99freelas.com.br/user/danilloboing" target="_blank"><img class="logos-footer" width="40" src="./src/img/9-square-fill.svg" alt="logo do 99freelas com meu link"></a>
+          </ul>
+          <p class="copyright"><span class="text-muted">&copy; 2023 Danillo Boing</span></p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap/JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+      
+    <script src="./src/js/jogoDaForca.js"></script>
+  </body>
+</html>

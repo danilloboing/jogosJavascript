@@ -1,0 +1,32 @@
+.jogo-da-forca {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.word-display {
+  font-size: 3em;
+}
+
+.botao-jogar {
+  background-color: yellow;
+  color: black;
+  border-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.guess-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guess-input {
+  border-radius: 5px;
+}

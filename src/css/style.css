@@ -10,7 +10,7 @@ body {
 .navbar-collapse {
   flex-grow: 0;
 }
-nav {
+.navbar {
   border-bottom: 2px solid;
   background-color: yellow;
   font-weight: 700;
