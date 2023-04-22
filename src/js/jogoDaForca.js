@@ -23,9 +23,11 @@ function setWordToGuess() {
 
 }
 
+const form = document.querySelector(".guess-form"); // Selecionar o formulário
+const submitButton = document.querySelector(".botao-jogar");
+
 // Ouvinte de evento do formulário
-document.querySelector(".botao-jogar").addEventListener("submit", )
-document.querySelector(".guess-form").addEventListener("submit", function(event) {
+const handleSubmit = function(event) {
   event.preventDefault();
   const guessInput = document.querySelector(".guess-input");
   const guess = guessInput.value.toLowerCase();
@@ -66,8 +68,9 @@ document.querySelector(".guess-form").addEventListener("submit", function(event)
       document.querySelector('.word-display').textContent = wordToGuess
     }
   }
-});
-
+};
+form.addEventListener("submit", handleSubmit);
+submitButton.addEventListener("click", handleSubmit)
 document.querySelector('.botao-reset').addEventListener("click", function restartGame(){
   setWordToGuess()
 })
