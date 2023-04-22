@@ -125,7 +125,7 @@ h1{
 }
 
 .resultado-jogo-botao {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: yellow;
   padding: 10px 15px;
   cursor: pointer;
@@ -142,7 +142,7 @@ h1{
 
 .resultado-jogo-texto {
   color: white;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .mostrar-resultado-jogo {
@@ -169,4 +169,39 @@ h1{
     width: 100px;
     height: 100px;
   }
+
+  /* X */
+.celula.x::before,
+.celula.x::after,
+.jogo.x .celula:not(.x):not(.circle):hover::after,
+.jogo.x .celula:not(.x):not(.circle):hover::before {
+  content: "";
+  height: calc(70px * 0.15);
+  width: calc(70px * 0.9);
+  background: black;
+  position: absolute;
+}
+
+.celula.x::before,
+.jogo.x .celula:not(.x):not(.circle):hover::before {
+  transform: rotate(45deg);
+}
+
+.celula.x::after,
+.jogo.x .celula:not(.x):not(.circle):hover::after {
+  transform: rotate(-45deg);
+}
+
+/* Circle */
+.celula.circle::before,
+.celula.circle::after,
+.jogo.circle .celula:not(.x):not(.circle):hover::after,
+.jogo.circle .celula:not(.x):not(.circle):hover::after {
+  content: "";
+  height: calc(70px * 0.9);
+  width: calc(70px * 0.9);
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+}
 }

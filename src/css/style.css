@@ -28,8 +28,12 @@ body {
 }
 
 #logo-header {
-  width: 6rem;
+  width: 7rem;
   scroll-behavior: smooth;
+}
+#logo-header:hover, .logos-footer:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 #main-logo {
@@ -63,15 +67,14 @@ body {
   background-color: rgb(212, 212, 212);
 }
 
-
-#games {
+#games, #contato {
   scroll-behavior: smooth;
 }
 
-.contato{
+#contato{
   scroll-behavior: smooth;
 }
-.contato p {
+#contato p {
   text-align: center;
 }
 .logos-footer{

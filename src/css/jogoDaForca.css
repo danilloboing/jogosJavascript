@@ -4,20 +4,14 @@
   font-size: 24px;
   font-weight: bold;
   padding: 20px;
-  border-radius: 10px;
+}
 
+.bloco-saidas-jogo {
+  border: 1px solid black;
 }
 
 .word-display {
-  font-size: 3em;
-}
-
-.botao-jogar {
-  background-color: yellow;
-  color: black;
-  border-color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
+  font-size: 3rem;
 }
 
 .guess-form {
@@ -26,7 +20,17 @@
   align-items: center;
   flex-direction: column;
 }
-
 .guess-input {
   border-radius: 5px;
+}
+
+.botao-jogar {
+  background-color: yellow;
+  color: black;
+}
+
+@media screen and (max-width:500px) {
+  .word-display {
+    font-size: 2rem;
+  }
 }

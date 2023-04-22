@@ -21,7 +21,7 @@
     <header>
       <nav class=" navbar navbar-expand-sm mb-4 fixed-top w-100 p-3">
         <div class="container-fluid d-flex justify-content-around align-items-center">
-          <img src="./src/img/js.png" id="logo-header" alt="logo do Minijogos Javascript">
+          <a href="./index.html"><img src="./src/img/js.png" id="logo-header" alt="logo do Minijogos Javascript"></a>
           <button class="navbar-toggler botao-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,15 +41,20 @@
     </header>
 
     <div class="jogo-da-forca">
-      <h1>Jogo da Forca</h1>
-      <p class="word-display"></p>
-      <p>Letras Erradas: <span class="wrong-guesses"></span></p>
-      <form class="guess-form">
+      <div class="bloco-saidas-jogo pt-2 ">
+        <h1>Jogo da Forca</h1>
+        <p class="word-display text-nowrap text-sm-center text-uppercase"></p>
+        <p>Letras Erradas: <span class="wrong-guesses text-uppercase"></span></p>
+      </div>
+
+      <form class="guess-form mt-3">
         <label for="guess-input">Digite uma letra:</label>
         <input type="text" class="guess-input" maxlength="1">
-        <button class="botao-jogar" type="submit">Adivinhar</button>
-        <button class="botao-reset" type="click">Reiniciar</button>
       </form>
+      <div class="btn-group p-3 gap-3">
+        <button class="botao-jogar rounded-2" type="submit">Adivinhar</button>
+        <button class="botao-reset rounded-2" type="click">Reiniciar</button>
+      </div>
     </div>
 
     <footer class="col-12 m-auto">
