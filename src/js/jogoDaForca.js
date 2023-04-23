@@ -38,13 +38,11 @@ const handleSubmit = function(event) {
     alert("Você já tentou essa letra antes!");
     return;
   }
-  
-  // Adiciona a letra adivinhada à lista de letras adivinhadas
+
   guessedLetters.push(guess);
   
   // Verifica se a letra está na palavra a ser adivinhada
   if (wordToGuess.includes(guess)) {
-    // Atualiza a palavra com a letra adivinhada
     let newWordDisplay = "";
     for (let i = 0; i < wordToGuess.length; i++) {
       if (guessedLetters.includes(wordToGuess[i])) {

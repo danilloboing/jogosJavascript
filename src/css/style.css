@@ -71,6 +71,19 @@ body {
   scroll-behavior: smooth;
 }
 
+.card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.games-img {
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.card-body {
+  flex: none;
+}
+
 #contato{
   scroll-behavior: smooth;
 }
