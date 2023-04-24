@@ -1,4 +1,4 @@
-const listaPalavras = ["amor", "beleza", "caminho", "desejo", "esperança", "felicidade", "gratidão", "harmonia", "juventude", "liberdade", "mágica", "natureza", "paz", "qualidade", "riqueza", "saúde", "trabalho", "união", "vitória", "xícara", "zero", "abacate", "banana", "cachorro", "dinheiro", "escada", "futebol", "girassol", "hotel", "igreja", "jardim", "kiwi", "limão", "mamão", "noite", "olho", "palavra", "queijo", "rosa", "sabão", "tênis", "uva", "viagem", "xadrez", "yoga", "zebra", "água", "bolo", "carro"];
+const listaPalavras = ["amor", "beleza", "caminho", "desejo", "esperança", "felicidade", "gratidao", "harmonia", "juventude", "liberdade", "magica", "natureza", "paz", "qualidade", "riqueza", "saude", "trabalho", "uniao", "vitoria", "xicara", "zero", "abacate", "banana", "cachorro", "dinheiro", "escada", "futebol", "girassol", "hotel", "igreja", "jardim", "kiwi", "limao", "mamao", "noite", "olho", "palavra", "queijo", "rosa", "sabao", "tenis", "uva", "viagem", "xadrez", "yoga", "zebra", "agua", "bolo", "carro"];
 let palavraParaAdivinhar
 let tentativas;
 let letrasErradas;
