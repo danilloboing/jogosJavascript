@@ -26,9 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Bootstrap 5
 - JavaScript
 
-## 💻 Projeto
-
-O website Meu Primeiro Milhão é um programa para o usuário simular em quanto tempo ele chegará em 1 milhão de reais. 
+## 💻 Projeto 
 
 - [Visite o projeto online](https://bohr.io/danilloboing/jogosJavascript/preview/branch/main)
 
