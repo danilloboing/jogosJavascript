@@ -15,7 +15,7 @@ Melhor que apenas desenvolver alguns jogos com Javascript, é deixar que outras 
 </p>
 
 <p align="center">
-  <img alt="Projeto Jogos Javascript" src="./src/img/jogosJs.foto1" width="100%">
+  <img alt="Projeto Jogos Javascript" src="./src/img/jogosJs_foto1" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O website Meu Primeiro Milhão é um programa para o usuário simular em quanto tempo ele chegará em 1 milhão de reais. 
 
-- [Visite o projeto online](https://jogos-javascript.vercel.app/adivinhaNumero.html)
+- [Visite o projeto online](https://bohr.io/danilloboing/jogosJavascript/preview/branch/main)
 
 ## :memo: Licença
 
