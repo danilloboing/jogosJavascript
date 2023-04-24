@@ -1,25 +1,25 @@
-const wordList = ["amor", "beleza", "caminho", "desejo", "esperança", "felicidade", "gratidão", "harmonia", "juventude", "liberdade", "mágica", "natureza", "paz", "qualidade", "riqueza", "saúde", "trabalho", "união", "vitória", "xícara", "zero", "abacate", "banana", "cachorro", "dinheiro", "escada", "futebol", "girassol", "hotel", "igreja", "jardim", "kiwi", "limão", "mamão", "noite", "olho", "palavra", "queijo", "rosa", "sabão", "tênis", "uva", "viagem", "xadrez", "yoga", "zebra", "água", "bolo", "carro"];
-let wordToGuess
-let guessedLetters;
-let wrongGuesses;
+const listaPalavras = ["amor", "beleza", "caminho", "desejo", "esperança", "felicidade", "gratidão", "harmonia", "juventude", "liberdade", "mágica", "natureza", "paz", "qualidade", "riqueza", "saúde", "trabalho", "união", "vitória", "xícara", "zero", "abacate", "banana", "cachorro", "dinheiro", "escada", "futebol", "girassol", "hotel", "igreja", "jardim", "kiwi", "limão", "mamão", "noite", "olho", "palavra", "queijo", "rosa", "sabão", "tênis", "uva", "viagem", "xadrez", "yoga", "zebra", "água", "bolo", "carro"];
+let palavraParaAdivinhar
+let tentativas;
+let letrasErradas;
 const restartButton = document.querySelector('.botao-reset')
 
-setWordToGuess()
+geradorPalavra()
 
-function setWordToGuess() {
+function geradorPalavra() {
   
   //Inicializando as variáveis
-  wordToGuess = wordList[Math.floor(Math.random() * wordList.length)];
-  guessedLetters = [];
-  wrongGuesses = 0;
+  palavraParaAdivinhar = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
+  tentativas = [];
+  letrasErradas = 0;
   document.querySelector('.wrong-guesses').textContent = ""
 
   // Palavra a ser adivinhada
-  let wordDisplay = "";
-  for (let i = 0; i < wordToGuess.length; i++) {
-    wordDisplay += "_ ";
+  let display = "";
+  for (let i = 0; i < palavraParaAdivinhar.length; i++) {
+    display += "_ ";
   } 
-  document.querySelector(".word-display").textContent = wordDisplay;
+  document.querySelector(".word-display").textContent = display;
 
 }
 
@@ -29,46 +29,46 @@ const submitButton = document.querySelector(".botao-jogar");
 // Ouvinte de evento do formulário
 const handleSubmit = function(event) {
   event.preventDefault();
-  const guessInput = document.querySelector(".guess-input");
-  const guess = guessInput.value.toLowerCase();
-  guessInput.value = "";
+  const palpiteInput = document.querySelector(".guess-input");
+  const palpite = palpiteInput.value.toLowerCase();
+  palpiteInput.value = "";
   
   // Verifica se a letra já foi adivinhada
-  if (guessedLetters.includes(guess)) {
+  if (tentativas.includes(palpite)) {
     alert("Você já tentou essa letra antes!");
     return;
   }
 
-  guessedLetters.push(guess);
+  tentativas.push(palpite);
   
   // Verifica se a letra está na palavra a ser adivinhada
-  if (wordToGuess.includes(guess)) {
-    let newWordDisplay = "";
-    for (let i = 0; i < wordToGuess.length; i++) {
-      if (guessedLetters.includes(wordToGuess[i])) {
-        newWordDisplay += wordToGuess[i] + " ";
+  if (palavraParaAdivinhar.includes(palpite)) {
+    let newDisplay = "";
+    for (let i = 0; i < palavraParaAdivinhar.length; i++) {
+      if (tentativas.includes(palavraParaAdivinhar[i])) {
+        newDisplay += palavraParaAdivinhar[i] + " ";
       } else {
-        newWordDisplay += "_ ";
+        newDisplay += "_ ";
       }
     }
-    document.querySelector(".word-display").textContent = newWordDisplay;
+    document.querySelector(".word-display").textContent = newDisplay;
     
     // Verifica se todas as letras foram adivinhadas
-    if (!newWordDisplay.includes("_")) {
+    if (!newDisplay.includes("_")) {
       alert("Você ganhou!");
     }
   } else {
     // Atualiza a lista de letras erradas e verifica se o jogador perdeu
-    wrongGuesses++;
-    document.querySelector(".wrong-guesses").textContent += guess + " ";
-    if (wrongGuesses === 6) {
+    letrasErradas++;
+    document.querySelector(".wrong-guesses").textContent += palpite + " ";
+    if (letrasErradas === 6) {
       alert("Você perdeu!");
-      document.querySelector('.word-display').textContent = wordToGuess
+      document.querySelector('.word-display').textContent = palavraParaAdivinhar
     }
   }
 };
 form.addEventListener("submit", handleSubmit);
 submitButton.addEventListener("click", handleSubmit)
 document.querySelector('.botao-reset').addEventListener("click", function restartGame(){
-  setWordToGuess()
+  geradorPalavra()
 })
