@@ -15,7 +15,7 @@ Melhor que apenas desenvolver alguns jogos com Javascript, é deixar que outras 
 </p>
 
 <p align="center">
-  <img alt="Projeto Jogos Javascript" src="./src/img/jogosJs_foto1" width="100%">
+  <img alt="Projeto Jogos Javascript" src="./src/img/jogosJs_foto1.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
