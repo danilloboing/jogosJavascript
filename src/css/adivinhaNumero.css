@@ -1,0 +1,20 @@
+.instrucoes .lista-instrucoes, .lista-instrucoes > ul {
+  display: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.lista-instrucoes > li {
+  text-align: center;
+  list-style: inside;
+  width: 100%;
+  margin: auto;
+}
+
+.instrucoes .botao-toggle {
+  margin-bottom: 10px;
+}
+
+.numero-secreto {
+  color: red;
+}

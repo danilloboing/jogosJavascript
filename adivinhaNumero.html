@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MiniJogos JS - Jogo da Forca</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minijogos Javascript</title>
 
-    <link rel="icon" href="/src/img/controle-de-video-game.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-      <link rel="stylesheet" href="./src/css/style.css">
-      <link rel="stylesheet" href="./src/css/jogoDaForca.css">
+  <link rel="icon" href="/src/img/controle-de-video-game.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/adivinhaNumero.css">
+
   </head>
 
   <body>
-
-    <header>
+ 
       <nav class=" navbar navbar-expand-sm mb-4 fixed-top w-100 p-3">
         <div class="container-fluid d-flex justify-content-around align-items-center">
           <a href="./index.html"><img src="./src/img/js.png" id="logo-header" alt="logo do Minijogos Javascript"></a>
@@ -29,7 +27,7 @@
           <div class="collapse navbar-collapse" id="navbarsExample03">
             <ul class="nav navbar-nav navegacao me-auto mb-2 mb-sm-0">
               <li class="nav-item" aria-current="page">
-                <a class="nav-link" href="/index.html">Home</a> 
+                <a class="nav-link" href="./index.html">Home</a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link"  href="#contato">Contato</a>
@@ -38,28 +36,44 @@
           </div>
         </div>
       </nav>
-    </header>
 
-    <div class="jogo-da-forca">
-      <div class="bloco-saidas-jogo pt-2 ">
-        <h1>Jogo da Forca</h1>
-        <p class="word-display text-nowrap text-sm-center text-uppercase"></p>
-        <p>Letras Erradas: <span class="wrong-guesses text-uppercase"></span></p>
-      </div>
 
-      <form class="guess-form mt-3">
-        <label for="guess-input">Digite uma letra:</label>
-        <input type="text" class="guess-input" maxlength="1" placeholder="A">
-      </form>
-      <div class="btn-group p-3 gap-3">
-        <button class="botao-jogar rounded-2" type="submit">Adivinhar</button>
-        <button class="botao-reset rounded-2" type="click">Reiniciar</button>
+    <div class="p-2 mb-4 bg-light rounded-3 mt-5">
+      <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Adivinha Número</h1>
+        <div class="instrucoes">
+          <button class="botao-toggle btn m-auto" id="botao-primario">Ver instruções</button>
+          <ul class="lista-instrucoes m-auto">
+            <li>O objetivo do jogo é adivinhar o número secreto gerado pelo computador, que está entre 1 e 100.</li>
+            <li>Digite um número (inteiro) no campo de entrada fornecido e clique no botão "Enviar" para fazer uma tentativa.</li>
+            <li>O jogo irá fornecer dicas indicando se o número secreto é maior ou menor do que o número que você adivinhou.</li>
+            <li>Você terá 6 chanches de acertar o número secreto.</li>
+            <li>Após o final do jogo, ele mostrará o resultado. Se desejar jogar novamente. Clique em "Reiniciar"</li>
+          </ul>
+        </div>
+        
+        <div class="jogo-da-forca">
+          <div class="bloco-saidas-jogo pt-2 ">
+            <p class="text-nowrap text-center fs-5 mt-4 mb-3">O número secreto é o <span class="numero-secreto">X</span></p>
+            <p>Tentativas --> <span class="tentativas"></span></p>
+            <p class="saidas"></p>
+          </div>
+    
+          <form class="form mt-3">
+            <label for="input">Insira seu palpite:</label>
+            <input type="number" class="palpite-input" maxlength="1" placeholder="5">
+          </form>
+          <div class="btn-group p-3 gap-3 d-flex justify-content-center" >
+            <button class="botao-jogar rounded-2" type="submit" id="botao-primario">Adivinhar</button>
+            <button class="botao-reset rounded-2" type="click" id="botao-secundario">Reiniciar</button>
+          </div>
+        </div>
       </div>
     </div>
 
     <footer class="col-12 m-auto">
       <div class="container-fluid d-flex flex-column align-items-center">
-        <div id="contato" class="contato">
+        <div id="contato">
           <p class="lead text-center">Contato</p>
           <ul class="d-flex flex-row p-0 flex-wrap justify-content-center">
             <a class="footer-list" href="https://www.linkedin.com/in/danilloboing/" target="_blank"><img class="logos-footer" width="40" src="./src/img/linkedin.svg" alt="logo do linkedin com meu link"></a>
@@ -71,16 +85,14 @@
           <p class="copyright"><span class="text-muted">&copy; 2023 Danillo Boing</span></p>
       </div>
     </footer>
-
-    <!-- Bootstrap/JavaScript Libraries -->
+    <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-    </script>
-      
-    <script src="./src/js/jogoDaForca.js"></script>
+    </script> 
+    
+    <script src="./src/js/adivinhaNumero.js"></script>
   </body>
-</html>

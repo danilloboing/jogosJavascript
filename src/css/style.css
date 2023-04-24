@@ -41,18 +41,18 @@ body {
 
 }
 
-#botao-jogar {
+#botao-primario {
   background-color: yellow;
   color: black;
   border-color: black;
   width: 10em;
 }
 
-#botao-jogar:hover {
+#botao-primario:hover {
   background-color: rgb(236, 217, 4);
 }
 
-#botao-github {
+#botao-secundario {
   width: 10em;
   margin-left: 10px;
   display: flex;
@@ -63,7 +63,7 @@ body {
   border: 1px solid black;
 }
 
-#botao-github:hover {
+#botao-secundario:hover {
   background-color: rgb(212, 212, 212);
 }
 
