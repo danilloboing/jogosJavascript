@@ -25,13 +25,13 @@ function geradorPalavra() {
 
 const form = document.querySelector(".guess-form"); // Selecionar o formulário
 const submitButton = document.querySelector(".botao-jogar");
-
 // Ouvinte de evento do formulário
 const handleSubmit = function(event) {
   event.preventDefault();
   const palpiteInput = document.querySelector(".guess-input");
   const palpite = palpiteInput.value.toLowerCase();
   palpiteInput.value = "";
+
   
   // Verifica se a letra já foi adivinhada
   if (tentativas.includes(palpite)) {
@@ -55,15 +55,18 @@ const handleSubmit = function(event) {
     
     // Verifica se todas as letras foram adivinhadas
     if (!newDisplay.includes("_")) {
-      alert("Você ganhou!");
+      document.querySelector('.display-end-game').textContent = "Parabéns! Você ganhou!"
+
+      $('#modal-resultado').modal('show');
     }
   } else {
     // Atualiza a lista de letras erradas e verifica se o jogador perdeu
     letrasErradas++;
     document.querySelector(".wrong-guesses").textContent += palpite + " ";
     if (letrasErradas === 6) {
-      alert("Você perdeu!");
       document.querySelector('.word-display').textContent = palavraParaAdivinhar
+      document.querySelector('.display-end-game').textContent = "Você perdeu!"
+      $('#modal-resultado').modal('show');
     }
   }
 };

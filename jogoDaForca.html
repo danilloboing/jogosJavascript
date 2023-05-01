@@ -49,11 +49,30 @@
 
       <form class="guess-form mt-3">
         <label for="guess-input">Digite uma letra:</label>
-        <input type="text" class="guess-input" maxlength="1" placeholder="A">
+        <input type="text" class="guess-input mt-2" maxlength="1" placeholder="A">
       </form>
-      <div class="btn-group p-3 gap-3">
-        <button class="botao-jogar rounded-2" type="submit">Adivinhar</button>
-        <button class="botao-reset rounded-2" type="click">Reiniciar</button>
+      <div class="btn-group p-3 d-flex justify-content-center mt-3 flex-wrap gap-3">
+        <button id="botao-primario" type="submit">Adivinhar</button>
+        <button id="botao-secundario" type="click">Reiniciar</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-resultado" aria-labelledby="modal-result" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modal-resultado">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-result">Resultado</h5>
+            </div>
+          <div class="modal-body">
+            <div class="display-end-game">
+             
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" id="botao-secundario">Close</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -80,6 +99,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
+
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    
       
     <script src="./src/js/jogoDaForca.js"></script>
   </body>

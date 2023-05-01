@@ -42,29 +42,44 @@ body {
 }
 
 #botao-primario {
-  background-color: yellow;
   color: black;
-  border-color: black;
   width: 10em;
+  background: yellow;
+  font-family: inherit;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  
 }
 
 #botao-primario:hover {
-  background-color: rgb(236, 217, 4);
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#botao-primario:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 #botao-secundario {
-  width: 10em;
-  margin-left: 10px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  background-color: beige;
   color: black;
-  border: 1px solid black;
+  width: 10em;
+  background: beige;
+  font-family: inherit;
+  border: 2px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
 }
 
 #botao-secundario:hover {
-  background-color: rgb(212, 212, 212);
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+#botao-secundario:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
 
 #games, #contato {
